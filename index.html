@@ -3,48 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Política de Privacidad - TemporizadorCLV</title>
+    <title>Política de Privacidad / Privacy Policy - TemporizadorCLV</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; color: #333; max-width: 800px; }
-        h1 { color: #0f1b2d; }
-        h2 { color: #1a2a40; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.7; 
+            color: #2c3e50; 
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 760px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .lang-btn {
+            background-color: #e2e8f0;
+            color: #475569;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .lang-btn.active {
+            background-color: #0f1b2d;
+            color: #ffffff;
+        }
+        .lang-btn:hover:not(.active) {
+            background-color: #cbd5e1;
+        }
+        h1 { 
+            color: #0f1b2d; 
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+        .date {
+            color: #7f8c8d;
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        h2 { 
+            color: #1a2a40; 
+            font-size: 18px;
+            border-bottom: 2px solid #edf2f7; 
+            padding-bottom: 8px; 
+            margin-top: 30px;
+        }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 8px; }
+        a { color: #2563eb; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .lang-content {
+            display: none;
+        }
+        .lang-content.active {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Política de Privacidad - TemporizadorCLV</h1>
-    <p><strong>Última actualización:</strong> 12 de octubre de 2026</p>
+    <div class="container">
+        <!-- Selector de Idioma -->
+        <div class="lang-switch">
+            <button class="lang-btn active" onclick="switchLang('es', event)">🇪🇸 Español</button>
+            <button class="lang-btn" onclick="switchLang('en', event)">🇺🇸 English</button>
+        </div>
 
-    <p>En <strong>TemporizadorCLV</strong> respetamos y protegemos la privacidad de nuestros usuarios. Esta Política de Privacidad describe el tratamiento de la información dentro de nuestra aplicación móvil.</p>
+        <!-- CONTENIDO EN ESPAÑOL -->
+        <div id="content-es" class="lang-content active">
+            <h1>Política de Privacidad - TemporizadorCLV</h1>
+            <div class="date"><strong>Última actualización:</strong> 12 de octubre de 2026</div>
 
-    <h2>1. Recopilación y Uso de Datos</h2>
-    <p><strong>TemporizadorCLV</strong> no recopila, almacena en servidores externos, transmite ni comparte ningún tipo de información personal, sensible o identificable del usuario.</p>
-    <p>Todos los tiempos, configuraciones, temporizadores creados y apuntes o contraseñas guardados en la Bóveda de Seguridad se almacenan de manera estrictamente local en el dispositivo del usuario.</p>
+            <p>En <strong>TemporizadorCLV</strong> respetamos y protegemos la privacidad de nuestros usuarios. Esta Política de Privacidad describe el tratamiento de la información dentro de nuestra aplicación móvil.</p>
 
-    <h2>2. Bóveda de Apuntes y Cifrado de Datos</h2>
-    <p>Los datos guardados en la Bóveda de Apuntes están protegidos mediante cifrado local de grado militar (<strong>AES-256</strong>). La información no sale del dispositivo y solo es accesible a través de la propia aplicación.</p>
+            <h2>1. Recopilación y Uso de Datos</h2>
+            <p><strong>TemporizadorCLV</strong> no recopila, almacena en servidores externos, transmite ni comparte ningún tipo de información personal, sensible o identificable del usuario.</p>
+            <p>Todos los tiempos, configuraciones, temporizadores creados y apuntes o contraseñas guardados en la Bóveda de Seguridad se almacenan de manera estrictamente local en el dispositivo del usuario.</p>
 
-    <h2>3. Autenticación Biométrica</h2>
-    <p>Para desbloquear la Bóveda de Apuntes, la aplicación utiliza la API nativa de autenticación biométrica de Android (huella digital o reconocimiento facial). La verificación es gestionada de forma directa por el sistema operativo. <strong>TemporizadorCLV no recopila, procesa ni almacena datos ni plantillas biométricas del usuario.</strong></p>
+            <h2>2. Bóveda de Apuntes y Cifrado de Datos</h2>
+            <p>Los datos guardados en la Bóveda de Apuntes están protegidos mediante cifrado local de grado militar (<strong>AES-256</strong>). La información no sale del dispositivo y solo es accesible a través de la propia aplicación.</p>
 
-    <h2>4. Permisos Requeridos</h2>
-    <p>Para ofrecer un funcionamiento óptimo, la aplicación solicita los siguientes permisos en el dispositivo:</p>
-    <ul>
-        <li><strong>Notificaciones:</strong> Permite alertar al usuario mediante sonido o vibración cuando un temporizador finaliza, incluso si la aplicación está en segundo plano o con la pantalla apagada.</li>
-        <li><strong>Programación de Alarmas / Tareas en Segundo Plano:</strong> Garantiza el conteo preciso del tiempo y la ejecución puntual de las alertas.</li>
-        <li><strong>Biometría (USE_BIOMETRIC / USE_FINGERPRINT):</strong> Permite verificar la identidad del usuario para desbloquear la Bóveda de Apuntes.</li>
-    </ul>
-    <p>Ninguno de estos permisos se utiliza para rastrear al usuario ni para enviar información a servidores externos.</p>
+            <h2>3. Autenticación Biométrica</h2>
+            <p>Para desbloquear la Bóveda de Apuntes, la aplicación utiliza la API nativa de autenticación biométrica de Android (huella digital o reconocimiento facial). La verificación es gestionada de forma directa por el sistema operativo. <strong>TemporizadorCLV no recopila, procesa ni almacena datos ni plantillas biométricas del usuario.</strong></p>
 
-    <h2>5. Servicios de Terceros</h2>
-    <p>Nuestra aplicación no integra SDKs de terceros, herramientas de analítica (como Google Analytics) ni redes publicitarias que rastreen o recolecten información del dispositivo.</p>
+            <h2>4. Permisos Requeridos</h2>
+            <p>Para ofrecer un funcionamiento óptimo, la aplicación solicita los siguientes permisos en el dispositivo:</p>
+            <ul>
+                <li><strong>Notificaciones:</strong> Permite alertar al usuario mediante sonido o vibración cuando un temporizador finaliza, incluso si la aplicación está en segundo plano o con la pantalla apagada.</li>
+                <li><strong>Programación de Alarmas / Tareas en Segundo Plano:</strong> Garantiza el conteo preciso del tiempo y la ejecución puntual de las alertas.</li>
+                <li><strong>Biometría (USE_BIOMETRIC / USE_FINGERPRINT):</strong> Permite verificar la identidad del usuario para desbloquear la Bóveda de Apuntes.</li>
+            </ul>
+            <p>Ninguno de estos permisos se utiliza para rastrear al usuario ni para enviar información a servidores externos.</p>
 
-    <h2>6. Cambios en esta Política</h2>
-    <p>Nos reservamos el derecho de actualizar esta Política de Privacidad si las funcionalidades de la aplicación cambian en el futuro. Cualquier modificación será publicada en esta misma página.</p>
+            <h2>5. Servicios de Terceros</h2>
+            <p>Nuestra aplicación no integra SDKs de terceros, herramientas de analítica (como Google Analytics) ni redes publicitarias que rastreen o recolecten información del dispositivo.</p>
 
-    <h2>7. Contacto</h2>
-    <p>Si tienes alguna duda o consulta sobre esta política, puedes contactarnos a través de:</p>
-    <p><strong>Correo electrónico:</strong>cristian.lopez.valderrama@gmail.com</p>
+            <h2>6. Cambios en esta Política</h2>
+            <p>Nos reservamos el derecho de actualizar esta Política de Privacidad si las funcionalidades de la aplicación cambian en el futuro. Cualquier modificación será publicada en esta misma página.</p>
+
+            <h2>7. Contacto</h2>
+            <p>Si tienes alguna duda o consulta sobre esta política, puedes contactarnos a través de:</p>
+            <p><strong>Correo electrónico:</strong> cristian.lopez.valderrama@gmail.com</p>
+        </div>
+
+        <!-- CONTENIDO EN INGLÉS -->
+        <div id="content-en" class="lang-content">
+            <h1>Privacy Policy - TemporizadorCLV</h1>
+            <div class="date"><strong>Last updated:</strong> October 12, 2026</div>
+
+            <p>At <strong>TemporizadorCLV</strong>, we respect and protect our users' privacy. This Privacy Policy describes how information is handled within our mobile application.</p>
+
+            <h2>1. Data Collection and Usage</h2>
+            <p><strong>TemporizadorCLV</strong> does not collect, store on external servers, transmit, or share any personal, sensitive, or identifiable user information.</p>
+            <p>All timers, settings, created countdowns, and notes or passwords stored in the Vault are kept strictly on the user's local device.</p>
+
+            <h2>2. Notes Vault and Data Encryption</h2>
+            <p>Data saved in the Notes Vault is protected using military-grade local encryption (<strong>AES-256</strong>). Information never leaves the device and is only accessible through the application itself.</p>
+
+            <h2>3. Biometric Authentication</h2>
+            <p>To unlock the Notes Vault, the application utilizes Android's native biometric authentication API (fingerprint or face recognition). Verification is managed directly by the operating system. <strong>TemporizadorCLV does not collect, process, or store user biometric data or templates.</strong></p>
+
+            <h2>4. Required Permissions</h2>
+            <p>To provide optimal functionality, the application requests the following permissions on the device:</p>
+            <ul>
+                <li><strong>Notifications:</strong> Allows alerting the user via sound or vibration when a timer completes, even when the app is in the background or the screen is off.</li>
+                <li><strong>Alarm Scheduling / Background Tasks:</strong> Ensures accurate timekeeping and timely execution of alerts.</li>
+                <li><strong>Biometrics (USE_BIOMETRIC / USE_FINGERPRINT):</strong> Verifies the user's identity to unlock the Notes Vault.</li>
+            </ul>
+            <p>None of these permissions are used to track the user or send information to external servers.</p>
+
+            <h2>5. Third-Party Services</h2>
+            <p>Our application does not integrate third-party SDKs, analytics tools (such as Google Analytics), or ad networks that track or collect device information.</p>
+
+            <h2>6. Changes to This Policy</h2>
+            <p>We reserve the right to update this Privacy Policy if application features change in the future. Any modifications will be published on this page.</p>
+
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions or inquiries regarding this policy, feel free to contact us at:</p>
+            <p><strong>Email:</strong> cristian.lopez.valderrama@gmail.com</p>
+        </div>
+    </div>
+
+    <script>
+        function switchLang(lang, event) {
+            document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+            document.getElementById('content-' + lang).classList.add('active');
+
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+    </script>
 
 </body>
 </html>
